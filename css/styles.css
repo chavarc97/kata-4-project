@@ -1,0 +1,12 @@
+.ball-size {
+    width: 100px;
+    height: auto;
+    padding-left: 1em;
+  }
+
+  .logos {
+    width: 2em;
+    height: auto;
+    margin: 10px 10px;
+    transition: all 0.3s ease-in-out;
+  }
