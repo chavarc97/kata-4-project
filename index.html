@@ -7,37 +7,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./css/styles.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script defer src="./src/app.js"></script>
     <title>Pokedex</title>
 </head>
 <body>
 <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-dark " >
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark" >
             <div class="container-fluid">
-              <a class="nav-link" href="#">
-                <img src="./assets/pokemnon-logo.svg" alt="Logo" width="100" height="24" class="d-inline-block align-text-top">
-                Pokédex
+              <a class="navbar-brand" href="#">
+                  <img src="./assets/pokemnon-logo.svg" alt="Logo" width="100" height="24" class="d-inline-block align-text-top">
               </a>
-              <form class="form-inline my-2 my-sm-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search by Name" aria-label="Search" id="search">
+              <form class="d-flex" role="search">
+                  <input class="form-control me-2" id="searc" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn btn-outline-light" type="submit">Search</button>
               </form>
             </div>
         </nav>
     </header>
 
 <!-- cards -->
-<main>
-    <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="Pokemon">
-        <button class="btn btn-danger">See Details</button>
-        <div class="card-body">
-     <!-- Generate cards with JS -->
-          <!-- <h5 class="card-title" id="pokemonCharacter"></h5>
-          <p class="card-text"></p>
-          <a href="" class="btn btn-primary">See Details</a> -->
+  <main>
+    <div class="container mt-5">
+        <div class="row" id="pokemonRow">
+
+          <!-- Create cards using JS -->
+          <!-- <div class="card" style="width: 18rem;">
+            <img src="./assets/pokemnon-logo.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button class="btn btn-primary">See details</button>
+            </div>
+          </div> -->
+          
         </div>
-      </div>
-</main>
+    </div>
+  </main>
     
 
 
