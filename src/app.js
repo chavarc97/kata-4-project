@@ -12,7 +12,7 @@ const fetchPokemon = async() => {
     const res = await fetch(url);
     const data = await res.json();
     pokemon = data.results.map( (result, i) => ({
-        name: result.name.toUpperCase(),
+        name: result.name,
         id: i +1,
         image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${i + 1}.png`
     }))
@@ -29,7 +29,7 @@ searchBtn.addEventListener('click', () =>{
     const pokemonRender = searchArray
         .map( (pokeman) =>
             `
-            <div class="card col-lg-6 mb-4 ml-5" style="width: 18rem;">
+        <div class="card col-lg-6 mb-4 ml-5" style="width: 18rem;">
             <img src="${pokeman.image}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">${pokeman.name}</h5>
@@ -40,7 +40,10 @@ searchBtn.addEventListener('click', () =>{
                 See Details
                 </button>
             </div>
-          </div>
+        </div>
+        <div class="d-grid gap-2">
+             <button class="btn btn-danger" onclick="fetchPokemon()" type="button">Return</button>
+        </div>
             `
         ).join('')
         
