@@ -67,7 +67,7 @@ const displayPokemon = (pokemon) => {
     const pokemonRender = pokemon
         .map( (pokeman) =>
             `
-            <div class="card col-lg-6 mb-4 ml-5" style="width: 18rem;">
+            <div class="card col-lg-6" style="width: 18rem;">
             <img src="${pokeman.image}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-capitalize">${pokeman.name}</h5>
